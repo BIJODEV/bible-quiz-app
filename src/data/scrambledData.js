@@ -1,0 +1,9 @@
+export const bibleBooks = [
+  "COLOSSIANS", "OBADIAH", "ELKANAH", "JONATHAN", "PROVERBS", 
+  "ONESIMUS", "EPHESIANS", "PRISCILLA", "HEBREWS", "NEHEMIAH"
+];
+
+export const bibleBooks2 = [
+  "GALATIANS", "LEVITICUS", "ESTHER", "EZEKIEL", "TIMOTHY", 
+  "GIDEON", "CHRONICLES", "ABRAHAM", "DEBORAH", "ELIJAH"
+];
