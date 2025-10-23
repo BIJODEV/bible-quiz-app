@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/bible-quiz-app/static/css/main.90e9c8dd.css",
-    "main.js": "/bible-quiz-app/static/js/main.cd5014ce.js",
+    "main.css": "/bible-quiz-app/static/css/main.43ac3944.css",
+    "main.js": "/bible-quiz-app/static/js/main.982bb0a9.js",
     "static/js/453.e2dd4cd2.chunk.js": "/bible-quiz-app/static/js/453.e2dd4cd2.chunk.js",
     "index.html": "/bible-quiz-app/index.html",
-    "main.90e9c8dd.css.map": "/bible-quiz-app/static/css/main.90e9c8dd.css.map",
-    "main.cd5014ce.js.map": "/bible-quiz-app/static/js/main.cd5014ce.js.map",
+    "main.43ac3944.css.map": "/bible-quiz-app/static/css/main.43ac3944.css.map",
+    "main.982bb0a9.js.map": "/bible-quiz-app/static/js/main.982bb0a9.js.map",
     "453.e2dd4cd2.chunk.js.map": "/bible-quiz-app/static/js/453.e2dd4cd2.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.90e9c8dd.css",
-    "static/js/main.cd5014ce.js"
+    "static/css/main.43ac3944.css",
+    "static/js/main.982bb0a9.js"
   ]
 }
