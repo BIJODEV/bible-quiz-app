@@ -171,25 +171,25 @@ const WhoAmIGame = ({ onBack, teamMode, teams, setTeams, currentTeam, setCurrent
           <p className="text-xl text-gray-600">Choose your preferred language for the game</p>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-6 mb-8">
+        <div className="grid grid-cols-2 gap-3 sm:gap-4 md:gap-6 mb-6 sm:mb-8">
           <button
             onClick={() => selectLanguage('english')}
-            className="bg-blue-500 hover:bg-blue-600 text-white p-8 rounded-2xl shadow-lg transition-all duration-300 transform hover:scale-105"
-          >
-            <div className="text-4xl mb-3">🇺🇸</div>
-            <h2 className="text-2xl font-bold mb-3">English</h2>
-            <p className="text-blue-100">
+            className="bg-blue-500 hover:bg-blue-600 text-white p-4 sm:p-6 md:p-8 rounded-xl sm:rounded-2xl shadow-lg transition-all duration-300 transform hover:scale-105"
+        >
+          <div className="text-2xl sm:text-3xl md:text-4xl mb-2 sm:mb-3">🇺🇸</div>
+          <h2 className="text-lg sm:text-xl md:text-2xl font-bold mb-2 sm:mb-3">English</h2>
+            <p className="text-blue-100 text-xs sm:text-sm md:text-base">
               {englishCharacters.length} characters available
             </p>
           </button>
 
           <button
             onClick={() => selectLanguage('malayalam')}
-            className="bg-green-500 hover:bg-green-600 text-white p-8 rounded-2xl shadow-lg transition-all duration-300 transform hover:scale-105"
-          >
-            <div className="text-4xl mb-3">🇮🇳</div>
-            <h2 className="text-2xl font-bold mb-3">Malayalam</h2>
-            <p className="text-green-100">
+            className="bg-green-500 hover:bg-green-600 text-white p-4 sm:p-6 md:p-8 rounded-xl sm:rounded-2xl shadow-lg transition-all duration-300 transform hover:scale-105"
+        >
+          <div className="text-2xl sm:text-3xl md:text-4xl mb-2 sm:mb-3">🇮🇳</div>
+          <h2 className="text-lg sm:text-xl md:text-2xl font-bold mb-2 sm:mb-3">Malayalam</h2>
+          <p className="text-green-100 text-xs sm:text-sm md:text-base">
               {malayalamCharacters.length} characters available
             </p>
           </button>

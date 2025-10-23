@@ -168,25 +168,25 @@ const EmojiParables = ({ onBack, teamMode, teams, setTeams, currentTeam, setCurr
           <p className="text-xl text-gray-600">Guess the Bible story from emojis!</p>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-6 mb-8">
+       <div className="grid grid-cols-2 gap-3 sm:gap-4 md:gap-6 mb-6 sm:mb-8">
           <button 
             onClick={() => selectLanguage('english')} 
-            className="bg-blue-500 hover:bg-blue-600 text-white p-6 rounded-2xl shadow-lg transition-all duration-300"
-          >
-            <div className="text-3xl mb-2">🇺🇸</div>
-            <h2 className="text-xl font-bold mb-2">English</h2>
-            <p className="text-blue-100">
+            className="bg-blue-500 hover:bg-blue-600 text-white p-4 sm:p-6 md:p-8 rounded-xl sm:rounded-2xl shadow-lg transition-all duration-300 transform hover:scale-105"
+        >
+            <div className="text-2xl sm:text-3xl md:text-4xl mb-2 sm:mb-3">🇺🇸</div>
+            <h2 className="text-lg sm:text-xl md:text-2xl font-bold mb-2 sm:mb-3">English</h2>
+            <p className="text-blue-100 text-xs sm:text-sm md:text-base">
               {emojiParables.english.length} parables
             </p>
           </button>
           
           <button 
             onClick={() => selectLanguage('malayalam')} 
-            className="bg-green-500 hover:bg-green-600 text-white p-6 rounded-2xl shadow-lg transition-all duration-300"
-          >
-            <div className="text-3xl mb-2">🇮🇳</div>
-            <h2 className="text-xl font-bold mb-2">Malayalam</h2>
-            <p className="text-green-100">
+            className="bg-green-500 hover:bg-green-600 text-white p-4 sm:p-6 md:p-8 rounded-xl sm:rounded-2xl shadow-lg transition-all duration-300 transform hover:scale-105"
+        >
+          <div className="text-2xl sm:text-3xl md:text-4xl mb-2 sm:mb-3">🇮🇳</div>
+          <h2 className="text-lg sm:text-xl md:text-2xl font-bold mb-2 sm:mb-3">Malayalam</h2>
+          <p className="text-green-100 text-xs sm:text-sm md:text-base">
               {emojiParables.malayalam?.length || 0} parables
             </p>
           </button>
@@ -340,7 +340,7 @@ const EmojiParables = ({ onBack, teamMode, teams, setTeams, currentTeam, setCurr
             What Bible story do these emojis represent?
         </p>
         </div>
-        
+
         {/* Clues Section */}
         {!showCorrect && !showAnswer && currentClueIndex > 0 && (
           <div className="bg-blue-50 border-2 border-blue-200 rounded-xl p-4 mb-6">
