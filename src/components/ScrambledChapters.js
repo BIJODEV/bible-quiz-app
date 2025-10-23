@@ -175,9 +175,9 @@ const ScrambledChapters = ({ onBack, teamMode, teams, setTeams, currentTeam, set
       <div className="flex justify-between items-start sm:items-center mb-4 sm:mb-6">
         <button
           onClick={onBack}
-          className="text-gray-500 hover:text-gray-700 font-semibold text-sm sm:text-base flex items-center"
-        >
-          ← <span className="hidden xs:inline ml-1">Back</span>
+          className="bg-white border-2 border-gray-200 hover:border-blue-300 hover:bg-blue-50 text-gray-700 rounded-xl font-semibold transition-all shadow-sm hover:shadow-md w-11 h-11 flex items-center justify-center"
+         >
+        <span className="text-xl">←</span>
         </button>
         <div className="text-right">
           <div className="text-xl sm:text-2xl font-bold text-red-500">{timeLeft}s</div>

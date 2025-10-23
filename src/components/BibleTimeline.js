@@ -19,17 +19,44 @@ const BibleTimeline = ({ onBack, teamMode, teams, setTeams, currentTeam, setCurr
   const [hintPenalty, setHintPenalty] = useState(0);
 
   const getEventSet = () => {
-    return bibleTimelineEvents[language] || bibleTimelineEvents.english;
+    if (language === 'malayalam' && bibleTimelineEvents.malayalam && bibleTimelineEvents.malayalam.length > 0) {
+      return bibleTimelineEvents.malayalam;
+    }
+    return bibleTimelineEvents.english;
   };
 
   const selectLanguage = (lang) => {
     setLanguage(lang);
-    startNewRound();
+    
+    // Check if the selected language has events
+    const eventSet = lang === 'malayalam' ? bibleTimelineEvents.malayalam : bibleTimelineEvents.english;
+    
+    if (!eventSet || eventSet.length === 0) {
+      alert(`${lang === 'malayalam' ? 'Malayalam' : 'English'} events are not available yet. Using English instead.`);
+      setLanguage('english');
+      startNewRound('english');
+    } else {
+      startNewRound(lang);
+    }
+    
     setGamePhase('playing');
   };
 
-  const startNewRound = () => {
-    const eventSet = getEventSet();
+    const startNewRound = (lang = language) => {
+    // Use the provided language or current state language
+    const currentLang = lang || language;
+    const eventSet = currentLang === 'malayalam' && bibleTimelineEvents.malayalam && bibleTimelineEvents.malayalam.length > 0 
+      ? bibleTimelineEvents.malayalam 
+      : bibleTimelineEvents.english;
+    
+    // Debug log to check what's being fetched
+    console.log('Fetching events for:', currentLang, 'Available events:', eventSet.length);
+    
+    if (!eventSet || eventSet.length === 0) {
+      console.error('No events found for language:', currentLang);
+      alert('No events available. Please check your data file.');
+      return;
+    }
     const selectedEvents = [];
     const usedIndices = new Set();
     
@@ -227,8 +254,11 @@ const BibleTimeline = ({ onBack, teamMode, teams, setTeams, currentTeam, setCurr
   return (
     <div className="bg-white rounded-xl sm:rounded-2xl shadow-xl p-4 sm:p-6 max-w-4xl mx-3 sm:mx-4 md:mx-auto my-2 sm:my-4">
       <div className="flex justify-between items-start sm:items-center mb-4 sm:mb-6">
-        <button onClick={() => setGamePhase('language')} className="text-gray-500 hover:text-gray-700 font-semibold text-sm sm:text-base flex items-center">
-          ← <span className="hidden xs:inline ml-1">Language</span>
+        <button 
+          onClick={() => setGamePhase('language')}
+          className="bg-white border-2 border-gray-200 hover:border-blue-300 hover:bg-blue-50 text-gray-700 rounded-xl font-semibold transition-all shadow-sm hover:shadow-md w-11 h-11 flex items-center justify-center"
+        >
+          <span className="text-2xl">←</span>
         </button>
         <div className="text-right">
           <div className={`text-xl sm:text-2xl font-bold mb-1 ${

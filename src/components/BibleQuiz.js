@@ -294,11 +294,11 @@ if (gamePhase === 'setup') {
  return (
   <div className="bg-white rounded-xl sm:rounded-2xl shadow-xl p-4 sm:p-6 max-w-2xl mx-3 sm:mx-4 md:mx-auto my-2 sm:my-4">
     <div className="flex justify-between items-start sm:items-center mb-4 sm:mb-6">
-      <button
+      <button 
         onClick={() => setGamePhase('setup')}
-        className="text-gray-500 hover:text-gray-700 font-semibold text-sm sm:text-base flex items-center"
-      >
-        ← <span className="hidden xs:inline ml-1">Setup</span>
+        className="bg-white border-2 border-gray-200 hover:border-blue-300 hover:bg-blue-50 text-gray-700 rounded-xl font-semibold transition-all shadow-sm hover:shadow-md w-11 h-11 flex items-center justify-center"
+        >
+        <span className="text-2xl">←</span>
       </button>
       <div className="text-right">
         <div className="text-xs sm:text-sm text-gray-500">
