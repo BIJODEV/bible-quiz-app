@@ -107,7 +107,7 @@ if (gamePhase === 'language') {
         </p>
       </div>
 
-      <div className="grid grid-cols-1 gap-3 sm:gap-4 md:gap-6 mb-6 sm:mb-8">
+      <div className="grid grid-cols-2 gap-3 sm:gap-4 md:gap-6 mb-6 sm:mb-8">
         <button
           onClick={() => selectLanguage('english')}
           className="bg-blue-500 hover:bg-blue-600 text-white p-4 sm:p-6 md:p-8 rounded-xl sm:rounded-2xl shadow-lg transition-all duration-300 transform hover:scale-105"
