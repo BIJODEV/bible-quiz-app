@@ -336,7 +336,7 @@ const BibleTimeline = ({ onBack, teamMode, teams, setTeams, currentTeam, setCurr
                 <div className="flex items-center justify-between">
                   <div className="text-left flex-1 mr-2">
                     <h4 className="font-bold text-gray-800 text-sm sm:text-base">{event.event}</h4>
-                    <p className="text-gray-600 text-xs sm:text-sm">{event.reference}</p>
+                    {/* <p className="text-gray-600 text-xs sm:text-sm">{event.reference}</p> */}
                     {(showHint || showCorrect) && (
                       <p className="text-orange-600 font-semibold text-xs sm:text-sm mt-1">
                         Approx: {event.approximateDate}
