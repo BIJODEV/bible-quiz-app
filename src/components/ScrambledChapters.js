@@ -19,7 +19,7 @@ const ScrambledChapters = ({ onBack, teamMode, teams, setTeams, currentTeam, set
   const [currentBookIndex2, setCurrentBookIndex2] = useState(0);
   const [scrambledWord, setScrambledWord] = useState('');
   const [userInput, setUserInput] = useState('');
-  const [timeLeft, setTimeLeft] = useState(60);
+  const [timeLeft, setTimeLeft] = useState(75);
   const [gameOver, setGameOver] = useState(false);
   const [gamePhase, setGamePhase] = useState(teamMode ? 'teamA' : 'individual'); // 'teamA', 'teamB', 'individual', 'finished'
   const [teamAScore, setTeamAScore] = useState(0);
@@ -44,7 +44,7 @@ const ScrambledChapters = ({ onBack, teamMode, teams, setTeams, currentTeam, set
       if (teamMode) {
         if (gamePhase === 'teamA') {
           setGamePhase('teamB');
-          setTimeLeft(60);
+          setTimeLeft(75);
           setUserInput('');
         } else if (gamePhase === 'teamB') {
           setGamePhase('finished');
@@ -115,7 +115,7 @@ const ScrambledChapters = ({ onBack, teamMode, teams, setTeams, currentTeam, set
     setTeamBScore(0);
     setIndividualScore(0);
     setWordsGuessed(0);
-    setTimeLeft(60);
+    setTimeLeft(75);
     setGameOver(false);
     setUserInput('');
     setGamePhase(teamMode ? 'teamA' : 'individual');
