@@ -4,7 +4,6 @@ const Footer = () => {
   const [showMobileTooltip, setShowMobileTooltip] = useState(false);
   const currentYear = new Date().getFullYear();
 
-
   return (
     <div className="mt-8 sm:mt-12 pt-6 sm:pt-8 border-t border-gray-200/60">
       {/* Simple Copyright Footer */}
@@ -16,16 +15,19 @@ const Footer = () => {
       <div className="relative flex flex-col items-center">
         {/* Desktop Hover Container */}
         <div className="group relative inline-block">
-          <div 
+          <a 
+            href="https://knowurchurch.com" 
+            target="_blank" 
+            rel="noopener noreferrer"
             className="inline-flex items-center space-x-2 text-gray-500 hover:text-purple-600 transition-colors cursor-pointer"
             onClick={() => setShowMobileTooltip(!showMobileTooltip)}
           >
             <span className="text-sm">⛪</span>
-            <span className="text-xs sm:text-sm font-medium">Know Your Church - Coming Soon</span>
+            <span className="text-xs sm:text-sm font-medium">Know Your Church</span>
             <span className="text-xs text-purple-500 opacity-0 group-hover:opacity-100 transition-opacity hidden sm:inline">
-              Learn more
+              Visit website →
             </span>
-          </div>
+          </a>
 
           {/* Desktop Hover Tooltip */}
           <div className="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 hidden sm:group-hover:block z-10 w-64">
@@ -68,6 +70,16 @@ const Footer = () => {
                   Modernizing Sunday School programs through technology
                 </p>
               </div>
+
+              {/* Add a direct call-to-action button */}
+              <a 
+                href="https://knowurchurch.com" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="block w-full mt-2 bg-purple-500 text-white py-2 rounded font-medium text-xs text-center hover:bg-purple-600 transition-colors"
+              >
+                Visit Know Your Church
+              </a>
             </div>
           </div>
         </div>
@@ -108,10 +120,20 @@ const Footer = () => {
                 Helping churches modernize Sunday School programs
               </p>
             </div>
+
+            {/* Mobile CTA Button */}
+            <a 
+              href="https://knowurchurch.com" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="block w-full mt-2 bg-purple-500 text-white py-2 rounded font-medium text-xs text-center hover:bg-purple-600 transition-colors"
+            >
+              Visit Website
+            </a>
             
             <button
               onClick={() => setShowMobileTooltip(false)}
-              className="w-full mt-2 bg-purple-500 text-white py-1 rounded font-medium text-xs"
+              className="w-full mt-2 bg-gray-500 text-white py-1 rounded font-medium text-xs"
             >
               Close
             </button>

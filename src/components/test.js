@@ -19,7 +19,6 @@ const bibleCharacters = [
   },
   {
     name: "ELISHA",
-    difficulty: "hard",
     clues: [
       "I purified a poisoned stew",
       "I performed more miracles than any other Old Testament prophet",
@@ -34,56 +33,21 @@ const bibleCharacters = [
     ]
   },
   {
-    name: "RUTH",
-    difficulty: "hard",
-    clues: [
-      "I was a Moabite woman who chose to follow my mother-in-law’s God",
-      "I gleaned in the fields to provide food",
-      "I lay at the feet of a man while he slept as a symbolic request",
-      "I became the great-grandmother of King David",
-      "My story is one of loyalty and redemption"
-    ],
-    funFacts: [
-      "My famous words were 'Where you go, I will go'",
-      "I married Boaz, a relative of my late husband",
-      "My name means 'friend' or 'companion'"
-    ]
-  },
-  {
-    name: "DANIEL",
-    difficulty: "hard",
-    clues: [
-      "I was taken captive to Babylon as a young man",
-      "I refused to eat the royal food and wine",
-      "I interpreted dreams and mysterious writings",
-      "I survived a night with lions unharmed",
-      "I prayed three times a day facing Jerusalem"
-    ],
-    funFacts: [
-      "I served under several kings: Nebuchadnezzar, Belshazzar, Darius, and Cyrus",
-      "I interpreted the writing 'Mene, Mene, Tekel, Parsin'",
-      "An angel once called me 'highly esteemed'"
-    ]
-  },
-  {
     name: "MARY MAGDALENE",
-    difficulty: "hard",
     clues: [
-      "I was delivered from seven demons",
-      "I followed Jesus and supported His ministry",
+      "I am mentioned more than most apostles in the Gospels",
       "I was one of the first to witness the empty tomb",
       "I mistook Jesus for a gardener after His resurrection",
+      "My name comes from the town of Magdala",
       "Jesus told me to go and tell the others He had risen"
     ],
     funFacts: [
-      "I am mentioned more than most apostles in the Gospels",
       "I stood by the cross when most had fled",
       "My name comes from the town of Magdala"
     ]
   },
   {
     name: "CALEB",
-    difficulty: "hard",
     clues: [
       "I was one of twelve spies sent to explore Canaan",
       "I, along with Joshua, brought back a positive report",
@@ -98,30 +62,13 @@ const bibleCharacters = [
     ]
   },
   {
-    name: "HANNAH",
-    difficulty: "hard",
-    clues: [
-      "I was deeply sorrowful because I could not have children",
-      "I prayed so fervently that a priest thought I was drunk",
-      "I promised to dedicate my son to the Lord if He granted me one",
-      "My son served under the priest Eli",
-      "I sang a song of praise after my prayer was answered"
-    ],
-    funFacts: [
-      "I am the mother of the prophet Samuel",
-      "My prayer is seen as a model of faith and humility",
-      "My song inspired Mary’s Magnificat in Luke"
-    ]
-  },
-  {
     name: "STEPHEN",
-    difficulty: "hard",
     clues: [
       "I was chosen as one of the seven deacons",
-      "I performed great wonders and signs among the people",
+      "My name means 'crown' in Greek",
+      "I became the first Christian martyr",
       "I gave a long speech summarizing Israel’s history before my death",
       "I saw the heavens open and Jesus standing at God’s right hand",
-      "I became the first Christian martyr"
     ],
     funFacts: [
       "My name means 'crown' in Greek",
@@ -131,7 +78,6 @@ const bibleCharacters = [
   },
   {
     name: "NEHEMIAH",
-    difficulty: "hard",
     clues: [
       "I was a cupbearer to a Persian king",
       "I was grieved when I heard Jerusalem’s walls were broken",
@@ -147,7 +93,6 @@ const bibleCharacters = [
   },
   {
     name: "BARNABAS",
-    difficulty: "hard",
     clues: [
       "My real name was Joseph, but I was given a nickname meaning 'Son of Encouragement'",
       "I sold a field and gave the money to the apostles",
@@ -160,5 +105,51 @@ const bibleCharacters = [
       "My name appears 33 times in the New Testament",
       "Tradition says I was stoned to death in Cyprus"
     ]
-  }
+  },
+  {
+  name: "JOSIAH",
+  clues: [
+    "I became king of Judah at just eight years old",
+    "I ordered the repair of the temple in Jerusalem",
+    "A lost Book of the Law was found during my reign",
+    "I tore my robes when I heard the words of the Law",
+    "I led one of Judah’s greatest religious reforms"
+  ],
+  funFacts: [
+    "The prophetess Huldah confirmed God’s message to me",
+    "I died in battle against Pharaoh Neco of Egypt",
+    "My reign marked a temporary revival before Judah’s fall"
+  ]
+},
+{
+  name: "GIDEON",
+  clues: [
+    "I threshed wheat in secret when an angel appeared to me",
+    "I asked God for signs involving a fleece and dew",
+    "I defeated a massive army with just 300 men",
+    "We used torches and jars to confuse the enemy",
+    "I refused to become king after the victory"
+  ],
+  funFacts: [
+    "My other name was Jerubbaal, meaning 'Let Baal contend with him'",
+    "My story is found in Judges 6–8",
+    "My descendants later caused trouble for Israel through idolatry"
+  ]
+},
+{
+  name: "PHILEMON",
+  difficulty: "very hard",
+  clues: [
+    "I was a wealthy Christian who hosted a church in my house",
+    "One of my slaves ran away and met Paul in prison",
+    "Paul wrote me a personal letter asking me to forgive him",
+    "I was urged to accept my runaway slave as a brother in Christ",
+    "My story is found in one of the shortest New Testament books"
+  ],
+  funFacts: [
+    "My runaway slave was Onesimus, whose name means 'useful'",
+    "Paul’s letter to me is only 25 verses long",
+    "My example teaches reconciliation and forgiveness"
+  ]
+},
 ];
