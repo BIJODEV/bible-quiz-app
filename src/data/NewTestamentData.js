@@ -1261,7 +1261,7 @@ export const newTestamentData = [
   {
     question: "What visible sign appeared when the Holy Spirit descended at Pentecost?",
     options: ["A bright cloud", "A dove", "Tongues of fire", "A thunderous light"],
-    correct: 3,
+    correct: 2,
     explanation: "Tongues of fire rested on each of them, signifying the Holy Spirit (Acts 2:3).",
     book: "Acts",
     testament: "new"
