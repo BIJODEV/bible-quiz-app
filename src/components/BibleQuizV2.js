@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { bibleQuestions as generalEnglishQuestions } from '../data/BibleQuizData';
 import { bibleQuestions as malayalamQuestions } from '../data/BibleQuizDataMalayalam';
 import { oldTestamentQuestions } from '../data/OldTestamentData';
-import { newTestamentData as newTestamentQuestions } from '../data/NewTestamentData';
+import { newTestamentQuestions } from '../data/NewTestamentData';
 
 const BibleQuiz = ({ onBack, teamMode, teams, setTeams, currentTeam, setCurrentTeam }) => {
   const [gamePhase, setGamePhase] = useState('language');
@@ -244,179 +244,164 @@ const BibleQuiz = ({ onBack, teamMode, teams, setTeams, currentTeam, setCurrentT
   }
 
   // Testament Selection Phase (English only)
-// Testament Selection Phase (English only)
-if (gamePhase === 'testament') {
-  return (
-    <div className="bg-white rounded-xl sm:rounded-2xl shadow-xl p-4 sm:p-5 md:p-6 max-w-md mx-3 sm:mx-auto my-2 sm:my-4">
-      <div className="text-center mb-4 sm:mb-6">
-        <div className="text-3xl sm:text-4xl md:text-5xl mb-2 sm:mb-3">📖</div>
-        <h1 className="text-lg sm:text-xl md:text-2xl font-bold text-gray-800 mb-2">
-          Select Quiz Type
-        </h1>
-        <p className="text-xs sm:text-sm text-gray-600">
-          Choose what type of Bible quiz you want to take
-        </p>
-      </div>
+  if (gamePhase === 'testament') {
+    return (
+      <div className="bg-white rounded-xl sm:rounded-2xl shadow-xl p-4 sm:p-6 md:p-8 max-w-2xl mx-3 sm:mx-auto my-2 sm:my-4">
+        <div className="text-center mb-6 sm:mb-8">
+          <div className="text-4xl sm:text-5xl md:text-6xl mb-3 sm:mb-4">📖</div>
+          <h1 className="text-xl sm:text-2xl md:text-3xl font-bold text-gray-800 mb-2 sm:mb-4">
+            Select Quiz Type
+          </h1>
+          <p className="text-sm sm:text-base md:text-lg text-gray-600">
+            Choose what type of Bible quiz you want to take
+          </p>
+        </div>
 
-      <div className="space-y-3 sm:space-y-4 mb-4 sm:mb-6">
-        {/* General Quiz */}
-        <button
-          onClick={() => selectTestament('general')}
-          className="w-full bg-purple-500 hover:bg-purple-600 text-white p-4 sm:p-5 rounded-lg shadow-md transition-all duration-200 transform hover:scale-[1.02] active:scale-95"
-        >
-          <div className="flex items-center justify-between">
-            <div className="flex items-center space-x-3 sm:space-x-4">
-              <div className="text-2xl sm:text-3xl">🌟</div>
-              <div className="text-left">
-                <h2 className="text-base sm:text-lg font-bold">General Quiz</h2>
-                <p className="text-purple-100 text-xs sm:text-sm">
-                  {questionCounts.byType.general} mixed questions
-                </p>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6 mb-6 sm:mb-8">
+          {/* General Quiz */}
+          <button
+            onClick={() => selectTestament('general')}
+            className="bg-purple-500 hover:bg-purple-600 text-white p-6 sm:p-8 rounded-xl shadow-lg transition-all duration-300 transform hover:scale-105"
+          >
+            <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">🌟</div>
+            <h2 className="text-lg sm:text-xl font-bold mb-2 sm:mb-3">General Quiz</h2>
+            <p className="text-purple-100 text-sm sm:text-base mb-2">
+              Mixed questions from entire Bible
+            </p>
+            <div className="text-purple-200 text-xs sm:text-sm">
+              {questionCounts.byType.general} questions
+            </div>
+          </button>
+
+          {/* Old Testament */}
+          <button
+            onClick={() => selectTestament('old')}
+            className="bg-orange-500 hover:bg-orange-600 text-white p-6 sm:p-8 rounded-xl shadow-lg transition-all duration-300 transform hover:scale-105"
+          >
+            <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">⛰️</div>
+            <h2 className="text-lg sm:text-xl font-bold mb-2 sm:mb-3">Old Testament</h2>
+            <p className="text-orange-100 text-sm sm:text-base mb-2">
+              Questions from Genesis to Malachi
+            </p>
+            <div className="text-orange-200 text-xs sm:text-sm">
+              {questionCounts.byType.old} questions • {oldTestamentBooks.length} books
+            </div>
+          </button>
+
+          {/* New Testament */}
+          <button
+            onClick={() => selectTestament('new')}
+            className="bg-blue-500 hover:bg-blue-600 text-white p-6 sm:p-8 rounded-xl shadow-lg transition-all duration-300 transform hover:scale-105"
+          >
+            <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">✝️</div>
+            <h2 className="text-lg sm:text-xl font-bold mb-2 sm:mb-3">New Testament</h2>
+            <p className="text-blue-100 text-sm sm:text-base mb-2">
+              Questions from Matthew to Revelation
+            </p>
+            <div className="text-blue-200 text-xs sm:text-sm">
+              {questionCounts.byType.new} questions • {newTestamentBooks.length} books
+            </div>
+          </button>
+        </div>
+
+        <div className="space-y-3">
+          <button
+            onClick={backToLanguage}
+            className="w-full bg-gray-500 hover:bg-gray-600 text-white py-3 px-4 rounded-lg font-semibold transition-colors text-sm sm:text-base"
+          >
+            ← Back to Language Selection
+          </button>
+          <button
+            onClick={onBack}
+            className="w-full bg-gray-400 hover:bg-gray-500 text-white py-2.5 sm:py-3 px-4 rounded-lg font-semibold text-sm sm:text-base transition-colors"
+          >
+            Back to Menu
+          </button>
+        </div>
+      </div>
+    );
+  }
+
+  // Book Selection Phase (Old/New Testament only)
+  if (gamePhase === 'book') {
+    const books = quizType === 'old' ? oldTestamentBooks : newTestamentBooks;
+    const testamentName = quizType === 'old' ? 'Old Testament' : 'New Testament';
+    const testamentColor = quizType === 'old' ? 'orange' : 'blue';
+
+    return (
+      <div className="bg-white rounded-xl sm:rounded-2xl shadow-xl p-4 sm:p-6 md:p-8 max-w-4xl mx-3 sm:mx-auto my-2 sm:my-4">
+        <div className="text-center mb-6 sm:mb-8">
+          <div className="text-4xl sm:text-5xl md:text-6xl mb-3 sm:mb-4">📚</div>
+          <h1 className="text-xl sm:text-2xl md:text-3xl font-bold text-gray-800 mb-2 sm:mb-4">
+            Select Book - {testamentName}
+          </h1>
+          <p className="text-sm sm:text-base md:text-lg text-gray-600">
+            Choose which book you want to focus on
+          </p>
+        </div>
+
+        {/* All Books Option */}
+        <div className="mb-6">
+          <button
+            onClick={() => selectBook('')}
+            className={`w-full p-4 sm:p-6 rounded-lg border-2 text-left transition-all mb-4 ${
+              selectedBook === ''
+                ? `bg-${testamentColor}-500 border-${testamentColor}-500 text-white`
+                : `bg-white border-gray-200 text-gray-700 hover:border-${testamentColor}-300`
+            }`}
+          >
+            <div className="flex justify-between items-center">
+              <div>
+                <div className="font-bold text-lg sm:text-xl">All {testamentName} Books</div>
+                <div className="text-sm opacity-90">
+                  Mixed questions from all {testamentName} books
+                </div>
+              </div>
+              <div className="text-right">
+                <div className="font-bold text-lg">
+                  {quizType === 'old' ? questionCounts.byType.old : questionCounts.byType.new}
+                </div>
+                <div className="text-sm">questions</div>
               </div>
             </div>
-            <div className="text-purple-200 text-lg font-bold">→</div>
-          </div>
-        </button>
+          </button>
+        </div>
 
-        {/* Old Testament */}
-        <button
-          onClick={() => selectTestament('old')}
-          className="w-full bg-orange-500 hover:bg-orange-600 text-white p-4 sm:p-5 rounded-lg shadow-md transition-all duration-200 transform hover:scale-[1.02] active:scale-95"
-        >
-          <div className="flex items-center justify-between">
-            <div className="flex items-center space-x-3 sm:space-x-4">
-              <div className="text-2xl sm:text-3xl">⛰️</div>
-              <div className="text-left">
-                <h2 className="text-base sm:text-lg font-bold">Old Testament</h2>
-                <p className="text-orange-100 text-xs sm:text-sm">
-                  {questionCounts.byType.old} questions • {oldTestamentBooks.length} books
-                </p>
-              </div>
-            </div>
-            <div className="text-orange-200 text-lg font-bold">→</div>
-          </div>
-        </button>
-
-        {/* New Testament */}
-        <button
-          onClick={() => selectTestament('new')}
-          className="w-full bg-blue-500 hover:bg-blue-600 text-white p-4 sm:p-5 rounded-lg shadow-md transition-all duration-200 transform hover:scale-[1.02] active:scale-95"
-        >
-          <div className="flex items-center justify-between">
-            <div className="flex items-center space-x-3 sm:space-x-4">
-              <div className="text-2xl sm:text-3xl">✝️</div>
-              <div className="text-left">
-                <h2 className="text-base sm:text-lg font-bold">New Testament</h2>
-                <p className="text-blue-100 text-xs sm:text-sm">
-                  {questionCounts.byType.new} questions • {newTestamentBooks.length} books
-                </p>
-              </div>
-            </div>
-            <div className="text-blue-200 text-lg font-bold">→</div>
-          </div>
-        </button>
-      </div>
-
-      <div className="space-y-2 sm:space-y-3">
-        <button
-          onClick={backToLanguage}
-          className="w-full bg-gray-500 hover:bg-gray-600 text-white py-2.5 sm:py-3 px-4 rounded-lg font-semibold text-sm transition-colors"
-        >
-          ← Back to Language
-        </button>
-        <button
-          onClick={onBack}
-          className="w-full bg-gray-400 hover:bg-gray-500 text-white py-2.5 sm:py-3 px-4 rounded-lg font-semibold text-sm transition-colors"
-        >
-          Back to Menu
-        </button>
-      </div>
-    </div>
-  );
-}
-
-// Book Selection Phase (Old/New Testament only)
-if (gamePhase === 'book') {
-  const books = quizType === 'old' ? oldTestamentBooks : newTestamentBooks;
-  const testamentName = quizType === 'old' ? 'Old Testament' : 'New Testament';
-  const testamentColor = quizType === 'old' ? 'orange' : 'blue';
-
-  return (
-    <div className="bg-white rounded-xl sm:rounded-2xl shadow-xl p-4 sm:p-5 max-w-md mx-3 sm:mx-auto my-2 sm:my-4">
-      <div className="text-center mb-4 sm:mb-5">
-        <div className="text-3xl sm:text-4xl mb-2">📚</div>
-        <h1 className="text-lg sm:text-xl font-bold text-gray-800 mb-1">
-          {testamentName}
-        </h1>
-        <p className="text-xs sm:text-sm text-gray-600">
-          Choose a book to focus on
-        </p>
-      </div>
-
-      {/* All Books Option */}
-      <div className="mb-4">
-        <button
-          onClick={() => selectBook('')}
-          className={`w-full p-3 sm:p-4 rounded-lg border-2 text-left transition-all mb-3 ${
-            selectedBook === ''
-              ? `bg-${testamentColor}-500 border-${testamentColor}-500 text-white`
-              : `bg-white border-gray-200 text-gray-700 hover:border-${testamentColor}-300`
-          }`}
-        >
-          <div className="flex justify-between items-center">
-            <div>
-              <div className="font-bold text-sm sm:text-base">All Books</div>
-              <div className="text-xs opacity-90">
-                Mixed questions from all books
-              </div>
-            </div>
-            <div className="text-right">
-              <div className="font-bold text-sm sm:text-base">
-                {quizType === 'old' ? questionCounts.byType.old : questionCounts.byType.new}
-              </div>
-              <div className="text-xs">questions</div>
-            </div>
-          </div>
-        </button>
-      </div>
-
-      {/* Individual Books */}
-      <div className="max-h-60 overflow-y-auto mb-4">
-        <div className="grid grid-cols-2 gap-2">
-          {books.map((book) => (
+        {/* Individual Books */}
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-3 sm:gap-4 mb-6">
+          {books.map((book, index) => (
             <button
               key={book.name}
               onClick={() => selectBook(book.name)}
-              className={`p-2 sm:p-3 rounded-lg border-2 text-center transition-all ${
+              className={`p-3 sm:p-4 rounded-lg border-2 text-center transition-all ${
                 selectedBook === book.name
                   ? `bg-${testamentColor}-500 border-${testamentColor}-500 text-white`
                   : `bg-white border-gray-200 text-gray-700 hover:border-${testamentColor}-300`
               }`}
             >
-              <div className="font-bold text-xs sm:text-sm mb-1">{book.name}</div>
-              <div className="text-xs opacity-75">{book.count} Qs</div>
+              <div className="font-bold text-sm sm:text-base mb-1">{book.name}</div>
+              <div className="text-xs opacity-75">{book.count} questions</div>
             </button>
           ))}
         </div>
-      </div>
 
-      <div className="space-y-2">
-        <button
-          onClick={backToTestament}
-          className="w-full bg-gray-500 hover:bg-gray-600 text-white py-2.5 px-4 rounded-lg font-semibold text-sm transition-colors"
-        >
-          ← Back to Selection
-        </button>
-        <button
-          onClick={onBack}
-          className="w-full bg-gray-400 hover:bg-gray-500 text-white py-2.5 px-4 rounded-lg font-semibold text-sm transition-colors"
-        >
-          Back to Menu
-        </button>
+        <div className="space-y-3">
+          <button
+            onClick={backToTestament}
+            className="w-full bg-gray-500 hover:bg-gray-600 text-white py-3 px-4 rounded-lg font-semibold transition-colors text-sm sm:text-base"
+          >
+            ← Back to Testament Selection
+          </button>
+          <button
+            onClick={onBack}
+            className="w-full bg-gray-400 hover:bg-gray-500 text-white py-2.5 sm:py-3 px-4 rounded-lg font-semibold text-sm sm:text-base transition-colors"
+          >
+            Back to Menu
+          </button>
+        </div>
       </div>
-    </div>
-  );
-}
+    );
+  }
 
   // Setup Phase (Question Count Selection)
   if (gamePhase === 'setup') {
