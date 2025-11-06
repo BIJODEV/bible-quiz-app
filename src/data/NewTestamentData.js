@@ -1489,5 +1489,238 @@ export const newTestamentData = [
     explanation: "Herod was struck down and eaten by worms for not giving glory to God (Acts 12:23).",
     book: "Acts",
     testament: "new"
+  },
+  //------------------Romans Questions --------------
+  {
+    question: "According to Romans, what is revealed from heaven against all ungodliness and unrighteousness of men?",
+    options: ["Mercy of God", "Wrath of God", "Grace of God", "Law of God"],
+    correct: 1,
+    explanation: "The wrath of God is revealed from heaven against all ungodliness and unrighteousness (Romans 1:18).",
+    book: "Romans",
+    testament: "new"
+  },
+  {
+    question: "According to Paul, who are without excuse because God’s invisible qualities are clearly seen?",
+    options: ["The Gentiles", "The Jews", "The Romans", "All humanity"],
+    correct: 3,
+    explanation: "All people are without excuse because creation reveals God’s power (Romans 1:20).",
+    book: "Romans",
+    testament: "new"
+  },
+  {
+    question: "What leads people to repentance, according to Romans 2:4?",
+    options: ["The fear of judgment", "The kindness of God", "The law of Moses", "The preaching of prophets"],
+    correct: 2,
+    explanation: "God’s kindness leads us to repentance (Romans 2:4).",
+    book: "Romans",
+    testament: "new"
+  },
+  {
+    question: "Who will be justified before God, according to Romans 2:13?",
+    options: ["Those who hear the law", "Those who do the law", "Those who know the law", "Those who preach the law"],
+    correct: 0,
+    explanation: "Not the hearers, but the doers of the law will be justified (Romans 2:13).",
+    book: "Romans",
+    testament: "new"
+  },
+  {
+    question: "According to Romans, how did sin enter the world?",
+    options: ["Through Satan", "Through one man", "Through disobedience", "Through Eve"],
+    correct: 1,
+    explanation: "Sin entered through one man, Adam, and death through sin (Romans 5:12).",
+    book: "Romans",
+    testament: "new"
+  },
+  {
+    question: "What does Paul say about Abraham’s faith?",
+    options: ["It was weak", "It was counted as righteousness", "It was temporary", "It was according to the law"],
+    correct: 3,
+    explanation: "Abraham’s faith was credited to him as righteousness (Romans 4:3).",
+    book: "Romans",
+    testament: "new"
+  },
+  {
+    question: "According to Romans 6:23, what is the gift of God?",
+    options: ["Freedom", "Salvation through grace", "Eternal life in Christ Jesus", "Forgiveness of sins"],
+    correct: 2,
+    explanation: "The gift of God is eternal life in Christ Jesus our Lord (Romans 6:23).",
+    book: "Romans",
+    testament: "new"
+  },
+  {
+    question: "What does Paul compare baptism to in Romans 6?",
+    options: ["Circumcision", "New birth", "Death and resurrection", "Washing of the law"],
+    correct: 0,
+    explanation: "Baptism symbolizes death and resurrection with Christ (Romans 6:4).",
+    book: "Romans",
+    testament: "new"
+  },
+  {
+    question: "What does Paul mean when he says 'the wages of sin is death'?",
+    options: ["Sin has spiritual consequences", "All sin results in physical death", "Sin causes separation from the law", "Sin brings temporary punishment"],
+    correct: 1,
+    explanation: "The result or payment for sin is death, both spiritual and eternal (Romans 6:23).",
+    book: "Romans",
+    testament: "new"
+  },
+  {
+    question: "What example does Paul use to explain freedom from the law in Romans 7?",
+    options: ["A master and servant", "A soldier and commander", "A married woman freed by death", "A child under guardians"],
+    correct: 3,
+    explanation: "Paul compares it to a married woman released from her husband by death (Romans 7:2–3).",
+    book: "Romans",
+    testament: "new"
+  },
+  {
+    question: "In Romans 8:1, what does Paul say about those who are in Christ Jesus?",
+    options: ["They are under grace", "They face no condemnation", "They must keep the law", "They should fear judgment"],
+    correct: 1,
+    explanation: "There is now no condemnation for those who are in Christ Jesus (Romans 8:1).",
+    book: "Romans",
+    testament: "new"
+  },
+  {
+    question: "Who intercedes for us with groanings that cannot be uttered?",
+    options: ["Jesus Christ", "The Holy Spirit", "The angels", "The saints"],
+    correct: 3,
+    explanation: "The Spirit Himself intercedes for us with inexpressible groanings (Romans 8:26).",
+    book: "Romans",
+    testament: "new"
+  },
+  {
+    question: "What does Paul say all things work together for?",
+    options: ["The faithful", "The good of those who love God", "The glory of God alone", "The salvation of Israel"],
+    correct: 2,
+    explanation: "All things work together for good to those who love God (Romans 8:28).",
+    book: "Romans",
+    testament: "new"
+  },
+  {
+    question: "What can separate believers from the love of Christ?",
+    options: ["Tribulation", "Death or life", "Nothing", "Angels or powers"],
+    correct: 0,
+    explanation: "Nothing can separate us from the love of God in Christ Jesus (Romans 8:38–39).",
+    book: "Romans",
+    testament: "new"
+  },
+  {
+    question: "To whom did God say, 'I will have mercy on whom I have mercy'?",
+    options: ["Abraham", "Moses", "Pharaoh", "Jacob"],
+    correct: 1,
+    explanation: "God told Moses He would have mercy and compassion on whom He wills (Romans 9:15).",
+    book: "Romans",
+    testament: "new"
+  },
+  {
+    question: "According to Romans 9:17, why did God raise Pharaoh?",
+    options: ["To test Israel", "To display His power", "To harden his heart", "To punish Egypt"],
+    correct: 3,
+    explanation: "Pharaoh was raised to display God’s power and proclaim His name (Romans 9:17).",
+    book: "Romans",
+    testament: "new"
+  },
+  {
+    question: "What does Paul say Christ is the end of?",
+    options: ["The world", "The sacrificial system", "The law for righteousness", "The old covenant"],
+    correct: 2,
+    explanation: "Christ is the end of the law for righteousness to everyone who believes (Romans 10:4).",
+    book: "Romans",
+    testament: "new"
+  },
+  {
+    question: "According to Romans 10:17, how does faith come?",
+    options: ["Through prayer", "By grace", "By hearing the Word of Christ", "By studying the law"],
+    correct: 0,
+    explanation: "Faith comes by hearing, and hearing through the Word of Christ (Romans 10:17).",
+    book: "Romans",
+    testament: "new"
+  },
+  {
+    question: "What does Paul compare Israel to in Romans 11?",
+    options: ["A flock", "A vineyard", "An olive tree", "A house"],
+    correct: 1,
+    explanation: "Israel is compared to an olive tree; Gentiles are grafted in (Romans 11:17–24).",
+    book: "Romans",
+    testament: "new"
+  },
+  {
+    question: "What does Paul urge believers to offer in Romans 12:1?",
+    options: ["Their time", "Their bodies as living sacrifices", "Their possessions", "Their hearts alone"],
+    correct: 0,
+    explanation: "Paul urges believers to present their bodies as living sacrifices (Romans 12:1).",
+    book: "Romans",
+    testament: "new"
+  },
+  {
+    question: "How does Paul describe genuine love in Romans 12:9?",
+    options: ["Patient and kind", "Without hypocrisy", "Enduring all things", "Fulfilling the law"],
+    correct: 1,
+    explanation: "Let love be without hypocrisy; hate evil, cling to good (Romans 12:9).",
+    book: "Romans",
+    testament: "new"
+  },
+  {
+    question: "What does Paul instruct believers to do toward governing authorities?",
+    options: ["Disobey unjust rulers", "Submit to them", "Judge them by the law", "Avoid them"],
+    correct: 3,
+    explanation: "Submit to authorities, for they are established by God (Romans 13:1).",
+    book: "Romans",
+    testament: "new"
+  },
+  {
+    question: "According to Romans 13:10, what fulfills the law?",
+    options: ["Faith", "Grace", "Love", "Obedience"],
+    correct: 2,
+    explanation: "Love is the fulfillment of the law (Romans 13:10).",
+    book: "Romans",
+    testament: "new"
+  },
+  {
+    question: "What does Paul call the kingdom of God in Romans 14:17?",
+    options: ["A kingdom of truth", "Righteousness, peace, and joy in the Holy Spirit", "A spiritual temple", "A realm of grace"],
+    correct: 0,
+    explanation: "The kingdom of God is righteousness, peace, and joy in the Holy Spirit (Romans 14:17).",
+    book: "Romans",
+    testament: "new"
+  },
+  {
+    question: "According to Romans 15:4, what is the purpose of the Scriptures?",
+    options: ["To give commands", "To give hope through endurance", "To reveal prophecy", "To teach Israel alone"],
+    correct: 1,
+    explanation: "The Scriptures were written for our learning, to give hope through endurance (Romans 15:4).",
+    book: "Romans",
+    testament: "new"
+  },
+  {
+    question: "What did Paul say he would not boast in except what Christ accomplished through him?",
+    options: ["His apostleship", "His works", "His sufferings", "His wisdom"],
+    correct: 2,
+    explanation: "Paul only boasted in what Christ accomplished through him (Romans 15:18).",
+    book: "Romans",
+    testament: "new"
+  },
+  {
+    question: "Who carried Paul’s letter to the Romans?",
+    options: ["Phoebe", "Priscilla", "Tertius", "Timothy"],
+    correct: 0,
+    explanation: "Phoebe, a deacon of the church at Cenchreae, carried the letter (Romans 16:1).",
+    book: "Romans",
+    testament: "new"
+  },
+  {
+    question: "What warning does Paul give in Romans 16:17?",
+    options: ["Avoid false prophets", "Avoid those who cause divisions", "Avoid Gentile customs", "Avoid idle talk"],
+    correct: 1,
+    explanation: "Paul warns believers to avoid those who cause divisions contrary to doctrine (Romans 16:17).",
+    book: "Romans",
+    testament: "new"
+  },
+  {
+    question: "How does Paul end his letter to the Romans?",
+    options: ["With a song of praise", "With personal greetings", "With a long prayer", "With instruction to Titus"],
+    correct: 2,
+    explanation: "Paul ends with a doxology praising God’s wisdom and glory (Romans 16:25–27).",
+    book: "Romans",
+    testament: "new"
   }
 ];
