@@ -15,9 +15,9 @@ const BibleBookOrder = ({ onBack, teamMode, teams, setTeams, currentTeam, setCur
   const [showCorrect, setShowCorrect] = useState(false);
   const [pointsEarned, setPointsEarned] = useState(0);
 
-  const getBookSet = () => {
+  const getBookSet = (testamentType = testament) => {
     const bookData = language === 'malayalam' ? bibleBooksMalayalam : bibleBooks;
-    return bookData[testament];
+    return bookData[testamentType];
   };
 
   const selectLanguage = (lang) => {
@@ -27,12 +27,12 @@ const BibleBookOrder = ({ onBack, teamMode, teams, setTeams, currentTeam, setCur
 
   const selectTestament = (test) => {
     setTestament(test);
-    startNewRound();
+    startNewRound(test);
     setGamePhase('playing');
   };
 
-  const startNewRound = () => {
-    const bookSet = getBookSet();
+  const startNewRound = (testamentType = testament) => {
+    const bookSet = getBookSet(testamentType );
     const startIndex = Math.floor(Math.random() * (bookSet.length - 6));
     const correctBooks = bookSet.slice(startIndex, startIndex + 6);
     
@@ -92,7 +92,7 @@ const BibleBookOrder = ({ onBack, teamMode, teams, setTeams, currentTeam, setCur
         setGameOver(true);
       }
     }
-  }, [timer, gamePhase, gameOver, showCorrect]);
+  }, [timer, gamePhase, gameOver, showCorrect,round, totalRounds]);
 
   // Language Selection
   if (gamePhase === 'language') {
